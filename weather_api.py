@@ -45,6 +45,8 @@ class CurrentWeather:
             URL = BASE_URL + zipcode + "&units=imperial&appid=" + API_KEY
             response = requests.get(URL)
             data.append(response.json())
+            
+        
         return data
     
     def toDataBase(self):
